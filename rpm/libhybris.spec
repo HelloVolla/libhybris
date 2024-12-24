@@ -23,6 +23,7 @@ BuildRequires: vulkan-headers
 BuildRequires: droid-hal-devel
 Conflicts: mesa-llvmpipe
 Obsoletes: libhybris-libOpenVG <= 0.0.5.44
+Patch0:    0001-tls-workaround.patch
 
 %description
 %{summary}.
@@ -284,7 +285,7 @@ Requires:  %{name} = %{version}-%{release}
 %{summary}.
 
 %prep
-%autosetup -n %{name}-%{version}/%{name}
+%autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
 cd hybris
