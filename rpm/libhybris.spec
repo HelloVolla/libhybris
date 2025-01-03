@@ -291,6 +291,7 @@ Requires:  %{name} = %{version}-%{release}
 cd hybris
 %reconfigure \
   --enable-wayland \
+  --enable-mali-quirks \
   %{?with_debug:--enable-debug} \
   %{?with_trace:--enable-trace} \
 %ifnarch %{ix86}
