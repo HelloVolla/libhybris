@@ -23,8 +23,8 @@ BuildRequires: vulkan-headers
 BuildRequires: droid-hal-devel
 Conflicts: mesa-llvmpipe
 Obsoletes: libhybris-libOpenVG <= 0.0.5.44
-Patch0:    0006-q-add-runtime-APEX-directory-to-default-LD-paths.patch
-Patch1:    0009-q-Add-com.android.i18n-apex-to-library-path.patch
+#Patch0:    0006-q-add-runtime-APEX-directory-to-default-LD-paths.patch
+Patch0:    0009-q-Add-com.android.i18n-apex-to-library-path.patch
 
 %description
 %{summary}.
