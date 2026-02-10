@@ -1,15 +1,5 @@
-From 7a657c505efe8bda79de418bf4c39613a91ccd43 Mon Sep 17 00:00:00 2001
-From: Muhammad <muhammad23012009@hotmail.com>
-Date: Wed, 19 Jul 2023 14:26:01 +0000
-Subject: [PATCH] q: Add com.android.i18n apex to library path
-
-Signed-off-by: Muhammad <muhammad23012009@hotmail.com>
----
- hybris/common/q/linker.cpp | 4 ++++
- 1 file changed, 4 insertions(+)
-
 diff --git a/hybris/common/q/linker.cpp b/hybris/common/q/linker.cpp
-index 2af1dde..0938b75 100644
+index cf09de2..8ce6f18 100644
 --- a/hybris/common/q/linker.cpp
 +++ b/hybris/common/q/linker.cpp
 @@ -119,6 +119,7 @@ static const char* const kAsanSystemLibDir    = "/data/asan/system/lib64";
@@ -24,26 +14,23 @@ index 2af1dde..0938b75 100644
  static const char* const kAsanOdmLibDir       = "/data/asan/odm/lib";
  static const char* const kAsanVendorLibDir    = "/data/asan/vendor/lib";
  static const char* const kRuntimeApexLibDir   = "/apex/com.android.runtime/lib";
-+static const char* const kI18nApexLibDir      = "/apex/com.android.i18n/lib";
++static const char* const kI18nApexLibDir      = "/apex/com.android.i18n/lib"
  #endif
  
  static const char* const kAsanLibDirPrefix = "/data/asan";
-@@ -136,6 +138,7 @@ static const char* const kDefaultLdPaths[] = {
+@@ -135,6 +137,7 @@ static const char* const kDefaultLdPaths[] = {
+   kSystemLibDir,
    kOdmLibDir,
    kVendorLibDir,
-   kRuntimeApexLibDir,
 +  kI18nApexLibDir,
    nullptr
  };
  
-@@ -147,6 +150,7 @@ static const char* const kAsanDefaultLdPaths[] = {
+@@ -145,6 +148,7 @@ static const char* const kAsanDefaultLdPaths[] = {
+   kOdmLibDir,
    kAsanVendorLibDir,
    kVendorLibDir,
-   kRuntimeApexLibDir,
 +  kI18nApexLibDir,
    nullptr
  };
  
--- 
-2.25.1
-
