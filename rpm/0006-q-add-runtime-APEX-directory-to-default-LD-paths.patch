@@ -1,0 +1,32 @@
+From 2fa5f151856f458feda3ae0a27f0f61b9c028533 Mon Sep 17 00:00:00 2001
+From: TheKit <nekit1000@gmail.com>
+Date: Mon, 25 Jan 2021 20:35:16 +0200
+Subject: [PATCH 09/21] q: add runtime APEX directory to default LD paths
+
+---
+ hybris/common/q/linker.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/hybris/common/q/linker.cpp b/hybris/common/q/linker.cpp
+index 9d6f24a..077ac39 100644
+--- a/hybris/common/q/linker.cpp
++++ b/hybris/common/q/linker.cpp
+@@ -130,6 +130,7 @@ static const char* const kDefaultLdPaths[] = {
+   kSystemLibDir,
+   kOdmLibDir,
+   kVendorLibDir,
++  kRuntimeApexLibDir,
+   nullptr
+ };
+ 
+@@ -140,6 +141,7 @@ static const char* const kAsanDefaultLdPaths[] = {
+   kOdmLibDir,
+   kAsanVendorLibDir,
+   kVendorLibDir,
++  kRuntimeApexLibDir,
+   nullptr
+ };
+ 
+-- 
+2.31.1
+
